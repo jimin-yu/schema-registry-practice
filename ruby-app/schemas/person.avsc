@@ -1,0 +1,21 @@
+{
+  "name": "person",
+  "type": "record",
+  "fields": [
+    {
+      "name": "first_name",
+      "type": "string",
+      "doc": "이름"
+    },
+    {
+      "name": "last_name",
+      "type": "string",
+      "doc": "성"
+    },
+    {
+      "name": "age",
+      "type": "int",
+      "doc": "나이"
+    }
+  ]
+}
