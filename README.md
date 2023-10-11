@@ -59,5 +59,19 @@ docker-compose up -d
 ```
 [kafka 대시보드](localhost:9090)
 
+java-app
+1. src/main/avro/*.avsc 파일 작성
+  
+2. *.avsc 파일을 토대로 대응되는 Java 클래스 파일 생성하기  
+(build/generated-main-avro-java 디렉토리에 생성됨)
+```
+./gradlew generateAvroJava
+```
+3. app 실행   
+```
+producer로 실행 : @kafkaListener 코드 주석 처리하고 돌리기  
+consumer로 실행 : producer.sendMessage 코드 주석 처리하고 돌리기
+```
+
 
 
