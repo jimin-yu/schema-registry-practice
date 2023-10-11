@@ -1,4 +1,5 @@
 package com.example.demo.services;
+import com.example.demo.Person;
 import org.springframework.kafka.core.KafkaTemplate;
 
 import org.springframework.stereotype.Service;
@@ -11,9 +12,9 @@ public class KafkaProducer {
     }
     private final String topicName = "sample-topic";
 
-    public void sendMessage(String message) {
-        System.out.println("Publish Message: " + message);
-        kafkaTemplate.send(topicName, message);
+    public void sendMessage(Person person) {
+        System.out.println("Publish Message: " + person.toString());
+        kafkaTemplate.send(topicName, person);
         System.out.println("DONE");
     }
 }
